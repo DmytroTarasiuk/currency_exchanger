@@ -1,5 +1,7 @@
 <div class="container">
     <h3>Aктуальный курс валют (USD, EUR) по отношению к гривне {{ baseCode }}</h3>
-    <h4>USD: {{ usdRate }}</h4>
-    <h4>EUR: {{ eurRate }}</h4>
+    <div class="currencies">
+        <span class="currency"><span class="code">USD:</span> {{ usdRate }}</span>
+        <span class="currency"><span class="code">EUR:</span> {{ eurRate }}</span>
+    </div>
 </div>

@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    border: 1px solid #0d6efd;
+    border-radius: 16px;
+    padding: 16px 24px;
+}
+
+.currencies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.currency {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.code {
+    font-weight: 400;
+    color: #0d6efd;
+}

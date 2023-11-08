@@ -14,7 +14,7 @@ export class EselectComponent {
   currencies = Object.values(Currencies);
   convertedAmount: number = 0;
 
-  constructor(private currencyService: CurrencyService) {}
+  constructor(private currencyService: CurrencyService) { }
 
   ngOnInit(): void {
     this.updateExchangeRate();
@@ -22,8 +22,8 @@ export class EselectComponent {
 
   updateExchangeRate() {
     this.currencyService.getExchangePairRate(this.fromCurrency, this.toCurrency).subscribe((data: any) => {
-      const {conversion_rate} = data
-      this.convertedAmount = parseFloat((conversion_rate * this.amount).toFixed(3))
+      const { conversion_rate } = data;
+      this.convertedAmount = parseFloat((conversion_rate * this.amount).toFixed(3));
     });
   }
 
@@ -39,6 +39,14 @@ export class EselectComponent {
 
   onToCurrencyChange(value: Currencies) {
     this.toCurrency = value;
+    this.updateExchangeRate();
+  }
+
+  onReverseCurrenciesClick() {
+    const tempCurrency = this.fromCurrency;
+    this.fromCurrency = this.toCurrency;
+    this.toCurrency = tempCurrency;
+
     this.updateExchangeRate();
   }
 }

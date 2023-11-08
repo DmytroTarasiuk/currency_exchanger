@@ -1,13 +1,31 @@
-<label for="amount">Сумма:</label>
-<input id="amount" type="number" [(ngModel)]="amount" (ngModelChange)="onAmountChange($event)" />
-<label for="fromCurrency">Из: </label>
-<select id="fromCurrency" [(ngModel)]="fromCurrency" (ngModelChange)="onFromCurrencyChange($event)">
-    <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
-</select>
-
-<label for="convertedAmount">Получаем: </label>
-<input id="convertedAmount" type="number" [(ngModel)]="convertedAmount" [disabled]="true" />
-<label for="toCurrency">B: </label>
-<select id="toCurrency" [(ngModel)]="toCurrency" (ngModelChange)="onToCurrencyChange($event)">
-    <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
-</select>
+<div class="container">
+    <div class="wrapper">
+        <div class="item">
+            <label class="form-label" for="amount">Сумма:</label>
+            <input class="form-control" id="amount" type="number" [(ngModel)]="amount"
+                (ngModelChange)="onAmountChange($event)" />
+        </div>
+        <div class="item">
+            <label class="form-label currency" for="fromCurrency">Из: </label>
+            <select class="form-select" id="fromCurrency" [(ngModel)]="fromCurrency"
+                (ngModelChange)="onFromCurrencyChange($event)">
+                <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+            </select>
+        </div>
+    </div>
+    <i class="bi bi-arrow-left-right icon" (click)="onReverseCurrenciesClick()"></i>
+    <div class="wrapper">
+        <div class="item">
+            <label class="form-label" for="convertedAmount">Получаем: </label>
+            <input class="form-control" id="convertedAmount" type="number" [(ngModel)]="convertedAmount"
+                [disabled]="true" />
+        </div>
+        <div class="item">
+            <label class="form-label currency" for="toCurrency">B: </label>
+            <select class="form-select" id="toCurrency" [(ngModel)]="toCurrency"
+                (ngModelChange)="onToCurrencyChange($event)">
+                <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+            </select>
+        </div>
+    </div>
+</div>

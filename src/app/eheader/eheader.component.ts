@@ -12,13 +12,13 @@ export class EheaderComponent {
   eurRate: number = 0;
   baseCode = Currencies.UAH;
 
-  constructor(private currencyService: CurrencyService) {}
+  constructor(private currencyService: CurrencyService) { }
 
   ngOnInit(): void {
     this.currencyService.getExchangeRates(this.baseCode).subscribe((data: ExchangeRatesResponse) => {
-      const {conversion_rates} = data
-      this.usdRate = parseFloat(conversion_rates.USD.toFixed(3));
-      this.eurRate = parseFloat(conversion_rates.EUR.toFixed(3));
+      const { conversion_rates } = data;
+      this.usdRate = parseFloat(conversion_rates.USD.toFixed(5));
+      this.eurRate = parseFloat(conversion_rates.EUR.toFixed(5));
     });
   }
 }
