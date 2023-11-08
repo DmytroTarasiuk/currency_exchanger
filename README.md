@@ -2,26 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
 
-## Development server
+Before running this application, make sure you have the following software installed on your computer:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js: You can download it from [nodejs.org](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli) - You can install it globally using npm: `npm install -g @angular/cli`
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Follow these steps to run the app locally:
 
-## Build
+1. **Clone the repository**:
+`git clone https://github.com/DmytroTarasiuk/currency_exchanger.git`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Navigate to the project directory**:
+`cd currency_exchanger`
 
-## Running unit tests
+3. **Install Dependencies**:
+`npm install`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Start the Development Server**:
+`ng serve`
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
