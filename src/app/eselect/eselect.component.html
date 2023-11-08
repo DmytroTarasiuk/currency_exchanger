@@ -1,0 +1,13 @@
+<label for="amount">Сумма:</label>
+<input id="amount" type="number" [(ngModel)]="amount" (ngModelChange)="onAmountChange($event)" />
+<label for="fromCurrency">Из: </label>
+<select id="fromCurrency" [(ngModel)]="fromCurrency" (ngModelChange)="onFromCurrencyChange($event)">
+    <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+</select>
+
+<label for="convertedAmount">Получаем: </label>
+<input id="convertedAmount" type="number" [(ngModel)]="convertedAmount" [disabled]="true" />
+<label for="toCurrency">B: </label>
+<select id="toCurrency" [(ngModel)]="toCurrency" (ngModelChange)="onToCurrencyChange($event)">
+    <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+</select>
