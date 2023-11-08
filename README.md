@@ -23,3 +23,4 @@ Follow these steps to run the app locally:
 4. **Start the Development Server**:
 `ng serve`
 
+![My Image](images/currencyExchanger.png)
